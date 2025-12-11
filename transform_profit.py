@@ -14,8 +14,10 @@ def add_profit_column(input_path: str, output_path: str) -> None:
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--input", required=True)
-    parser.add_argument("--output", required=True)
+    # input and outfile files names inside the workflow yaml file 
+    parser.add_argument("--input", required=True) #sales.csv
+    parser.add_argument("--output", required=True) #sales_with_profit.csv
     args = parser.parse_args()
 
     add_profit_column(args.input, args.output)
+
