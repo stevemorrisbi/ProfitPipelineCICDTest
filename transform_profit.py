@@ -17,7 +17,10 @@ if __name__ == "__main__":
     # input and outfile files names inside the workflow yaml file 
     parser.add_argument("--input", required=True) #sales.csv
     parser.add_argument("--output", required=True) #sales_with_profit.csv
+    
+    #args below will hold the files ("sales.csv", "sales_with_profit.csv") ready to pass into the function when ran 
     args = parser.parse_args()
 
     add_profit_column(args.input, args.output)
+
 
